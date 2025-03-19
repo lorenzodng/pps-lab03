@@ -67,7 +67,7 @@ object Sequences:
      * E.g., [] => []
      */
     def reverse[A](s: Sequence[A]): Sequence[A] = s match
-      case Cons(h, t) => concat(reverse(t), Cons(h, Nil())) //20 10 - 30 20 10 ...
+      case Cons(h, t) => concat(reverse(t), Cons(h, Nil())) //10 20 30 - 20 30 10 - 30 20 10
       case _ => Nil()
 
     /*
