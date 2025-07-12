@@ -37,7 +37,7 @@ object Sequences:
      */
     def skip[A](s: Sequence[A])(n: Int): Sequence[A] = s match
       case Cons(h, t) if n > 0 => skip(t)(n - 1)
-      case Cons(h, t) => Cons(h, t)
+      case Cons(h, t) => Cons(h, skip(t)(n))
       case _ => Nil()
 
     /*
